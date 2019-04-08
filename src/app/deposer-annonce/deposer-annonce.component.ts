@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AnnnonceService } from '../annnonce.service';
+
 
 @Component({
   selector: 'app-deposer-annonce',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeposerAnnonceComponent implements OnInit {
 
-  constructor() { }
+  annonce = {
+    id : 0,
+    titre : "",
+    description : "",
+    photo : "",
+    prix : "",
+  };
+
+  annonces = []
+
+  constructor(private data: AnnnonceService) { }
+
+  valeurAnnonce = (event) => {
+    this.data.annonce[event.target.attribute('name')] = event.target.value
+  }
+
+  submit = () => {
+    this.data.add({...this.data.annonce})
+    alert("Votre annonce est enregistrée !")
+  }
+
 
   ngOnInit() {
+    this.annonces = this.data.annonce
+
   }
 
 }
