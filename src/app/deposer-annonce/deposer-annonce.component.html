@@ -1,31 +1,36 @@
 <section class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">Déposer une annonce</li>
-        </ol>
-      </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Déposer une annonce</li>
+    </ol>
+  </nav>
+  
   <div class="row">
     Votre Annonce
   </div>
   <div class="col">
     <div class="row">
       <h5>Titre de l'annonce :</h5>
-        <input type="text" (change)="valeurAnnonce($event)" placeholder="Titre de l'annonce" class="form-control" name="titre" />
+      <input type="text" (change)="valeurAnnonce($event)" placeholder="Titre de l'annonce" class="form-control"
+        name="titre" />
     </div>
     <div class="row">
       <h5>Description du produit :</h5>
-      <input type="text" (change)="valeurAnnonce($event)" placeholder="Description" class="form-control" name="description"/>
+      <input type="text" (change)="valeurAnnonce($event)" placeholder="Description" class="form-control"
+        name="description" />
     </div>
     <div class="row">
       <h5>Photo du produit :</h5>
-      <input type="text" (change)="valeurAnnonce($event)" placeholder="Lien de la photo" class="form-control" name="photo"/>
+      <input type="text" (change)="valeurAnnonce($event)" placeholder="Lien de la photo" class="form-control"
+        name="photo" />
     </div>
     <div class="row">
       <h5>Quel est le prix ?</h5>
-      <input type="float" (change)="valeurAnnonce($event)" placeholder="Prix" class="form-control" name="prix"/>
+      <input type="float" (change)="valeurAnnonce($event)" placeholder="Prix" class="form-control" name="prix" />
     </div>
   </div>
   <div class="row">
     <button class="btn btn-primary" type="submit" (click)="submit()">Valider l'annonce</button>
   </div>
+
 </section>

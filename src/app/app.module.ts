@@ -12,6 +12,7 @@ import { AnnnonceService } from './annnonce.service';
 const mesRoutes: Routes = [
   { path: '', component: ListAnnonceComponent },
   { path: 'depot', component: DeposerAnnonceComponent },
+  { path : 'recherche', component : RechercheComponent}
 ]
 
 @NgModule({
