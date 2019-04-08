@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnnonceService } from '../annnonce.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-deposer-annonce',
@@ -19,15 +19,16 @@ export class DeposerAnnonceComponent implements OnInit {
 
   annonces = []
 
-  constructor(private data: AnnnonceService) { }
+  constructor(private data: AnnnonceService, private router : Router) { }
 
   valeurAnnonce = (event) => {
-    this.annonces[event.target.attribute('name')] = event.target.value
+    this.annonces[event.target.getAttribute('name')] = event.target.value
   }
 
   submit = () => {
     this.data.add({...this.annonces})
     alert("Votre annonce est enregistrée !")
+    this.router.navigate([""])
   }
 
 

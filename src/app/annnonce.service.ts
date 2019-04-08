@@ -17,7 +17,9 @@ export class AnnnonceService {
 
   add = (annonce) => {
     this.annonces.push(annonce);
+    console.log(annonce)
     this.emit();
+    console.log(this.annonces)
   };
 
   search = (value) => {

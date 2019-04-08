@@ -12,9 +12,16 @@ export class ListAnnonceComponent implements OnInit {
   listeAnnonce = [];
 
 
-  constructor(private service : AnnnonceService) { }
+  constructor(private service : AnnnonceService) {
+    this.service.annonceSubject.subscribe((newAnnonces)=>{
+      this.listeAnnonce = newAnnonces;
+    })
+   }
 
   ngOnInit() {
+    this.service.annonceSubject.subscribe((newAnnonces)=>{
+      this.listeAnnonce = newAnnonces;
+    })
   }
 
 }
