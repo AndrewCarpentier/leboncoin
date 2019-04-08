@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class AnnnonceService {
 
-  annonces = [{id:'20',titre:'title', description: 'dzeoijdzedazedazed', photo: 'https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1133906920%2F960x0.jpg%3Ffit%3Dscale',prix:300}];;
-  annonceSubject;
+  annonces = [{id:20,titre:'title', description: 'dzeoijdzedazedazed', photo: 'https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1133906920%2F960x0.jpg%3Ffit%3Dscale',prix:300}];;
+  annonceSubject = new Subject <any> ()
 
   constructor() {
       this.emit();

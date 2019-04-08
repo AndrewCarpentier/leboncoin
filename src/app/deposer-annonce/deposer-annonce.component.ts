@@ -22,18 +22,17 @@ export class DeposerAnnonceComponent implements OnInit {
   constructor(private data: AnnnonceService) { }
 
   valeurAnnonce = (event) => {
-    this.data.annonce[event.target.attribute('name')] = event.target.value
+    this.annonces[event.target.attribute('name')] = event.target.value
   }
 
   submit = () => {
-    this.data.add({...this.data.annonce})
+    this.data.add({...this.annonces})
     alert("Votre annonce est enregistrée !")
   }
 
 
   ngOnInit() {
-    this.annonces = this.data.annonce
-
+    this.annonces = this.annonces
   }
 
 }
