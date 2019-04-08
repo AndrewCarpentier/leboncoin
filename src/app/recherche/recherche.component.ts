@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recherche.component.css']
 })
 export class RechercheComponent implements OnInit {
-
+  stock 
+  valeurStock(e){
+    this.stock=e.target.value;
+  }
   constructor() { }
 
   ngOnInit() {

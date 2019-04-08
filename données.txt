@@ -1,0 +1,84 @@
+
+
+COMPOSANT 1 : MENU
+
+
+----> 2 redirection : 
+		     
+
+			1 ---> composant déposer annonce.
+
+		        2 ---> composant recherche.
+--------------------------------------------------------------------------------------------------------
+
+
+COMPOSANT 2 : RECHERCHE
+
+
+			1 VARIABLE  ---> stock = "string"
+			1 Méthode   ---> valeurStock(e)
+			2 Méthode   ---> recherche()
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+COMPOSANT 3 : LISTE ANNONCE
+
+			1 VARIABLE  ---> annonces = []
+
+---------------------------------------------------------------------------------------------------------
+
+
+COMPOSANT 4 : ANNONCE
+
+			OBJET ---> annonce {
+			   id: int
+			   titre: " "
+			   descrpiption: " "
+			   photo: " "
+			   prix: float
+			}
+
+----------------------------------------------------------------------------------------------------------
+
+COMPOSANT 5 : DEPOSER ANNONCE
+
+			OBJET ---> annonce {
+			   id: int
+			   titre: " "
+			   descrpiption: " "
+			   photo: " "
+			   prix: float
+			}
+			
+			Méthode valeurAnnonce (e) {}
+			Méthode submit () {}
+
+----------------------------------------------------------------------------------------------------------
+
+					SERVICES:
+
+SERVICE 1 : ANNONCES 
+
+	VARIABLE ------> annonces = []
+
+		Méthode  ------> add (annonce) {}
+
+	 	Méthode  ------> search ("value") {}
+
+
+-------------------------------------------------------------------------------------------------------------
+
+					 ROUTES:
+
+ACCUEIL ----------->  " " = conponent liste annonce
+
+DEPOSER ANNONCE --->  " depot " = component DEPOSER ANNONCE
+			
+
+
+
+
+
+
