@@ -1,3 +1,16 @@
-<div>
-{{annonce.id}},{{annonce.titre}},{{annonce.description}},<img src='{{annonce.photo}}'>,{{annonce.prix}}
+<div class="row">
+    <div class="col-5">
+        <img src='{{annonce.photo}}'>
+    </div>
+    <div class="col">
+        <div class="row title">
+            {{annonce.id}} - {{annonce.titre}}
+        </div>
+        <div class="row">
+            {{annonce.description}}
+        </div>
+        <div class="row price">
+            {{annonce.prix}} €
+        </div>
+    </div>
 </div>
